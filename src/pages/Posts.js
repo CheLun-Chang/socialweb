@@ -37,7 +37,7 @@ function Posts() {
                 .firestore()
                 .collection("posts")
                 .orderBy('createdAt', 'desc')
-                .limit(3)
+                .limit(5)
                 .get()
                 .then((collectionSnapshot) => {
                     const data = collectionSnapshot.docs.map((docSnapshot) => {
